@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Layout practice
+        </title>
+    </head>
+    <style>
+        body {
+            color: white;
+            background-color: blue;
+        }
+        .grid-container {
+            background-color: blue;
+            display:grid;
+            /* grid-template-columns: 25% 25% 25% 25%; */
+            grid-template-columns: repeat (auto-fill, minmax(200px, 1fr));
+            grid-template-rows: 25% 25% 25% 25%;
+            word-wrap:break-word;
+            grid-template-areas: 
+            'menu header header1 header2'
+            'menu content content right'
+            'menu content1 content1 right'
+            'menu content2 content2 right'
+            ;
+            grid-gap: 5px;
+            grid-row-gap: 10px;
+            padding: 5px;
+
+        }
+        .grid-container > div {
+            text-align: center;
+            background-color: black;
+            padding: 5px 0;
+            font-size: 15px;
+        }
+        .header {
+            grid-area: header;
+        }
+        .header1 {
+            grid-area: header1;
+        }
+        .header2 {
+            grid-area: header2;
+        }
+        .menu {
+            grid-area: menu;
+            
+        }
+        .content1 {
+            grid-area: content1;
+        }
+        .content {
+            grid-area: content;
+        }
+        .content2 {
+            grid-area: content2;
+        }
+        .right {
+            grid-area: right;
+        }
+    </style>
+    <body>
+        <main class="grid-container">
+            <div class="header">
+hello
+            </div>
+            <div class="header1">
+                butt
+            </div>
+            <div class="header2">
+                head
+            </div>
+            <div class="menu">
+why
+            </div>
+            <div class="content">
+                heal
+            </div>
+            <div class="content1">hello</div>
+            <div class="content2">Yooo</div>
+            <div class="right">
+                right
+            </div>
+        </main>
+
+    </body>
+</html>
